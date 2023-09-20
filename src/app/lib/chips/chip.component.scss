@@ -1,0 +1,27 @@
+.status-container {
+  padding: 8px 16px 8px 16px;
+  background: #fef0c7 0% 0% no-repeat padding-box;
+  border-radius: 19px;
+  font: normal normal medium 14px/20px Archivo;
+  letter-spacing: 0px;
+  color: #dc6803;
+  font-size: 14px;
+}
+
+.contract-container {
+  background: var(--neutral-100) 0% 0% no-repeat padding-box;
+  color: #363f72;
+  opacity: 1;
+  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.user-container {
+  background: var(--neutral-700) 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-size: 14px;
+}

@@ -1,0 +1,24 @@
+<div class="app-container">
+  <div class="header-container">
+    <div class="title">
+      <div class="app-name">
+        {{ labels.appName }}
+      </div>
+      <div class="app-context">
+        {{ labels.appContext }}
+      </div>
+    </div>
+    <add-button (click)="addTodo()"></add-button>
+  </div>
+  <div class="todo-list-container" *ngIf="todos?.length">
+    <div *ngFor="let todo of todos">
+      <todo
+        [todo]="todo"
+        (deleteEvent)="deleteTodo($event)"
+        (editEvent)="editTodo($event)"
+      ></todo>
+    </div>
+  </div>
+</div>
+
+<todo [hidden]="true"></todo>

@@ -1,0 +1,35 @@
+<div class="todo-container">
+  <work-icon></work-icon>
+  <div class="corpus">
+    <div>
+      <div class="work-permit">
+        {{ labels.title }}
+      </div>
+      <div class="work-project">
+        {{ todo.workProject }}
+      </div>
+    </div>
+    <div class="contract-informations">
+      <chip [type]="'user'" [text]="todo.user"></chip>
+      <chip
+        [type]="'contract'"
+        [text]="todo.contract"
+        *ngIf="todo.contract"
+      ></chip>
+    </div>
+  </div>
+  <chip [type]="'status'" [text]="'Status'"></chip>
+  <div class="menu">
+    <more-button [matMenuTriggerFor]="menu"></more-button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="update()">
+        <mat-icon>edit</mat-icon>
+        <span>{{ labels.edit }}</span>
+      </button>
+      <button mat-menu-item (click)="delete()">
+        <mat-icon>delete</mat-icon>
+        <span>{{ labels.delete }}</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  padding: 30px 20px 30px 20px;
+  border-radius: 10px;
+  .corpus {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .work-permit {
+      color: var(--neutral-600);
+      font-size: 14px;
+    }
+    .work-project {
+      color: var(--neutral-900);
+      font-size: 16px;
+    }
+    .contract-informations {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}

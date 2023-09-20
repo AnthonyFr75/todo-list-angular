@@ -1,0 +1,7 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchCase="'status'" class="status-container">{{ text }}</div>
+  <div *ngSwitchCase="'user'" class="user-container">{{ text }}</div>
+  <div *ngSwitchCase="'contract'" class="contract-container">
+    Contrat {{ text }}
+  </div>
+</div>

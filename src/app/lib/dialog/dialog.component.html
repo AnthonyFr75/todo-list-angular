@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>{{ data ? labels.edit.title : labels.create.title }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="formGroup" class="mat-dialog-content">
+    <mat-form-field>
+      <mat-label>{{ labels.workProject }}</mat-label>
+      <input matInput formControlName="workProject" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ labels.user }}</mat-label>
+      <input matInput formControlName="user" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>{{ labels.contract }}</mat-label>
+      <input matInput formControlName="contract" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="mat-dialog-actions">
+  <button mat-button (click)="onNoClick()">{{ labels.cancel }}</button>
+  <button mat-raised-button color="primary" (click)="submit()">
+    {{ data ? labels.edit.accept : labels.create.accept }}
+  </button>
+</div>
